@@ -32,19 +32,26 @@ Bmw enthusiasts/customers
 User stories — 3–5 stories: As a [user], I want to [action], so that [benefit]
 1. As a bmw enthusiast/customer i want to browse available bmw
 models,so that i can choose a car iam interested in test driving
-2. As a bmw customer i want to view the details of a bmw model, so that i
+
+3. As a bmw customer i want to view the details of a bmw model, so that i
 can decide whether i want to book a test drive
-3. As a bmw customer i want to select a date and time for a test drive, so
+
+5. As a bmw customer i want to select a date and time for a test drive, so
 that i can book a convenient appointment
-4. A a bmw customer i want to receive a confirmation of my test drive
+
+7. A a bmw customer i want to receive a confirmation of my test drive
 booking so that i know when and where my test will take place
 
 Happy-path flow — The core feature, step by step (numbered, 5–8 steps max)
 
 1.user visits the website
+
 2.user chooses a bmw model
+
 3.user selects an available date and time
+
 4.user enters their details and books the test drive
+
 5.user receives a booking confirmation
 
 Part 3 — Tech Spec
