@@ -1,0 +1,35 @@
+{% extends "testdrive/base.html" %}
+
+{% block title %}BMW Test Drive | My Bookings{% endblock %}
+
+{% block content %}
+<div class="dark-section">
+
+    <h1>My Bookings</h1>
+
+    {% if bookings %}
+
+    <div class="vehicle-grid">
+        {% for booking in bookings %}
+        <div class="vehicle-card">
+            <div class="vehicle-info">
+                <h2>{{ booking.vehicle.name }} {{ booking.vehicle.model }}</h2>
+                <p><strong>Date:</strong> {{ booking.date }}</p>
+                <p><strong>Time:</strong> {{ booking.time }}</p>
+                <p><strong>Name:</strong> {{ booking.full_name }}</p>
+                <p><strong>Email:</strong> {{ booking.email }}</p>
+                <p><strong>Phone:</strong> {{ booking.phone }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% else %}
+
+    <p class="empty-state">You haven't booked any test drives yet.</p>
+    <a href="{% url 'vehicles' %}" class="book-button">Browse Vehicles</a>
+
+    {% endif %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "testdrive/base.html" %}
+
+{% block title %}BMW Test Drive | Booking Confirmed{% endblock %}
+
+{% block content %}
+
+<div class="success-page">
+
+    <div class="success-card">
+
+        <div class="success-icon">✓</div>
+
+        <h1>Booking Submitted</h1>
+
+        <p>
+            Thank you for requesting a BMW test drive.
+            Your booking has been submitted successfully.
+        </p>
+
+        <div class="success-buttons">
+
+            <a href="{% url 'vehicles' %}" class="hero-button">
+                View BMW Vehicles
+            </a>
+
+            <a href="{% url 'home' %}" class="secondary-button">
+                Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

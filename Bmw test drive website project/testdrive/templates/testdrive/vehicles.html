@@ -1,0 +1,80 @@
+{% extends "testdrive/base.html" %}
+{% load static %}
+
+{% block title %}BMW Test Drive | Vehicles{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1>Explore BMW Vehicles</h1>
+
+    <p class="vehicles-intro">
+        Explore our available BMW models and choose the vehicle
+        you would like to experience on your test drive.
+    </p>
+
+    <div class="vehicle-grid">
+
+        {% for vehicle in vehicles %}
+
+        <div class="vehicle-card">
+
+            <!-- Vehicle Image -->
+            <div class="vehicle-image">
+                {% if vehicle.image %}
+                <img src="{{ vehicle.image.url }}" alt="{{ vehicle.model }}"
+                    style="width:100%; height:200px; object-fit:cover;">
+                {% else %}
+                <div
+                    style="width:100%; height:200px; background:#eee; display:flex; align-items:center; justify-content:center;">
+                    No Image
+                </div>
+                {% endif %}
+            </div>
+
+
+
+
+
+
+            <!-- Vehicle Information -->
+            <div class="vehicle-info">
+
+                <h2>{{ vehicle.name }} {{ vehicle.model }}</h2>
+
+                <p>{{ vehicle.description }}</p>
+
+                {% if vehicle.available %}
+
+                <span class="availability">
+                    Available for test drive
+                </span>
+
+                <a href="{% url 'book_test_drive' %}?vehicle={{ vehicle.id }}" class="book-button">
+                    Book a Test Drive
+                </a>
+
+                {% else %}
+
+                <span class="availability unavailable">
+                    Currently unavailable
+                </span>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <p>No BMW vehicles are currently available.</p>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

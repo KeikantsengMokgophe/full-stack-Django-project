@@ -1,0 +1,70 @@
+{% extends "testdrive/base.html" %}
+
+{% block title %}BMW Test Drive | Home{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>Experience BMW</h1>
+
+        <p>
+            Discover the thrill of driving a BMW.
+            Explore our vehicles and book your test drive today.
+        </p>
+
+        <a href="{% url 'vehicles' %}" class="hero-button">
+            Explore BMW Vehicles
+        </a>
+    </div>
+</div>
+
+<section class="why-section">
+
+    <h2>Why Book a BMW Test Drive?</h2>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <h3>Experience the Drive</h3>
+            <p>
+                Get behind the wheel and experience the performance,
+                comfort and technology of a BMW.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>Explore BMW Models</h3>
+            <p>
+                Discover the BMW vehicles available for a personalised
+                test-drive experience.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>Easy Booking</h3>
+            <p>
+                Choose your vehicle, select a date and time, and submit
+                your test-drive request.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta-section">
+
+    <h2>Ready to Experience BMW?</h2>
+
+    <p>
+        Choose your BMW and request a test drive today.
+    </p>
+
+    <a href="{% url 'vehicles' %}" class="hero-button">
+        View BMW Vehicles
+    </a>
+
+</section>
+
+{% endblock %}

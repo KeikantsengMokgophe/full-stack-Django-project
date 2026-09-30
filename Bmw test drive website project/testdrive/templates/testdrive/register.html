@@ -1,0 +1,21 @@
+{% extends "testdrive/base.html" %}
+
+{% block title %}BMW Test Drive | Sign Up{% endblock %}
+
+{% block content %}
+<div class="auth-page">
+    <div class="auth-card">
+        <h1>Create Your Account</h1>
+        <p class="auth-subtitle">Join us to book and manage your BMW test drives.</p>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_p }}
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <p class="auth-switch">Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+    </div>
+</div>
+{% endblock %}

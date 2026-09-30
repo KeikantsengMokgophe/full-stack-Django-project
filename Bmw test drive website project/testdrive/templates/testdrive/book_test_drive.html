@@ -1,0 +1,22 @@
+{% extends "testdrive/base.html" %}
+
+{% block title %}BMW Test Drive | Book{% endblock %}
+
+{% block content %}
+
+<div class="booking-form">
+
+    <h1>Book a Test Drive</h1>
+
+    <p>Complete the form below to request your BMW test drive.</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {{ form.as_p }}
+        <button type="submit">Submit Booking</button>
+    </form>
+
+</div>
+
+{% endblock %}
