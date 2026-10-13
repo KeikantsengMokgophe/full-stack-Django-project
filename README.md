@@ -5,3 +5,13 @@ My BMW Test Drive System is intended to help BMW customers and car enthusiasts V
 -Payment or deposit handling
 -Ratings and reviews
 -Mobile application
+
+## Technical Design
+
+The BMW Test Drive Booking App uses Django's Model–View–Template (MVT) architecture.
+
+The system includes vehicle management, test-drive bookings, booking validation, and customer and administrator roles.
+
+**Technology stack:** Python, Django, HTML, CSS and SQLite.
+
+For the complete technical design, see [TECHNICAL_DESIGN.md](TECHNICAL_DESIGN.md).
