@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles', 'testdrive',
 ]
 
-MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+
     MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
